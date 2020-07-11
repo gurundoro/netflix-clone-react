@@ -22,7 +22,7 @@ class Footer extends Component {
     return (
       <FooterContainer>
         <span style={{ marginLeft: '15%', fontSize: '1.125rem' }}>
-          Questions?<Link to="/">Call 1-877-742-1335</Link>
+          Questions?<Link to="/">Call 1-800-NET-FLIX</Link>
         </span>
         <div className="footer-columns">
           <ul>

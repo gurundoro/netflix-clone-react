@@ -10,36 +10,42 @@ import { ic_keyboard_arrow_right } from 'react-icons-kit/md/ic_keyboard_arrow_ri
 
 
 class Header extends Component {
-    render() {
-        return (
-            <HeaderContainer className="header-container">
-                <div className="header-top">
-                 <Logo src={logo} alt=""/>       
-                <NavLink className="signIn-btn" to='./login'>Sign In</NavLink>
-                </div>
-                <div className="header-content">
-                    <Title>See what's next</Title>
-                    <SubTitle>WATCH ANYWHERE. CANCEL ANYTIME</SubTitle>
-                    <Button className='main-offer-btn'>
-                    try it now
-                    <Icon icon={ic_keyboard_arrow_right} siz3={37} />
-                    </Button>
-                </div>
-            </HeaderContainer>
-        )
-    }
+  render() {
+    return (
+      <HeaderContainer className="header-container">
+        <div className="header-top">
+          <Link to="/">
+            <Logo className="logo" src={logo} />
+          </Link>
+          <NavLink to="/login" className="btn signIn-btn">
+            Sign In
+          </NavLink>
+        </div>
+        {/* Header Content */}
+        <div className="header-content">
+          <Title>See what's next</Title>
+          <SubTitle>watch any where. cancel anytime</SubTitle>
+          <Link to="/choose-plan">
+            <Button className="main-offer-btn" primary>
+              try it now
+              <Icon className="Icon" size={37} icon={ic_keyboard_arrow_right} />
+            </Button>
+          </Link>
+        </div>
+      </HeaderContainer>
+    );
+  }
 }
 
-
-export default Header
+export default Header;
 
 // Media
 const customMedia = generateMedia({
-    lgDesktop: '1350px',
-    mdDesktop: '1150px',
-    tablet: '960px',
-    smTablet: '740px'
-  });
+  lgDesktop: '1350px',
+  mdDesktop: '1150px',
+  tablet: '960px',
+  smTablet: '740px'
+});
 
 // Logo
 const Logo = styled.img`
