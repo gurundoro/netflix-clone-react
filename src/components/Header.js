@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import logo from '../svg/logo.svg'
 import { NavLink, Link } from 'react-router-dom'
+import {Button} from './Button'
 import styled from 'styled-components'
 import { generateMedia } from 'styled-media-query'
 import Icon from 'react-icons-kit';
@@ -19,10 +20,10 @@ class Header extends Component {
                 <div className="header-content">
                     <Title>See what's next</Title>
                     <SubTitle>WATCH ANYWHERE. CANCEL ANYTIME</SubTitle>
-                    <Link className='main-offer-btn'>
+                    <Button className='main-offer-btn'>
                     try it now
                     <Icon icon={ic_keyboard_arrow_right} siz3={37} />
-                    </Link>
+                    </Button>
                 </div>
             </HeaderContainer>
         )
